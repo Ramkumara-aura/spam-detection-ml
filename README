@@ -1,0 +1,82 @@
+# Spam Message Detection using Machine Learning
+
+An internship project that classifies SMS/email messages as **Spam** or **Ham** (legitimate) using TF-IDF features and classical machine learning models.
+
+**Author:** Ram Kumar A
+**Institution:** M.Sc. Computer Science, Dr. N.G.P. Arts and Science College, Coimbatore
+
+## Problem Statement
+
+Unsolicited spam messages are a major nuisance and a common vector for phishing and fraud. Manual filtering doesn't scale, so this project builds an automated classifier that reads a message and decides — on its own — whether it's spam, based on text patterns rather than fixed keyword rules.
+
+## Approach
+
+1. **Data Collection** — labeled spam/ham text messages (with a small amount of borderline examples and label noise to reflect real-world data)
+2. **Preprocessing** — text cleaning + TF-IDF vectorization
+3. **Model Training** — Naive Bayes, Logistic Regression, and Linear SVM
+4. **Evaluation** — accuracy, precision, recall, F1-score on a held-out test set
+5. **Selection** — best-performing model is used for prediction
+
+## Tech Stack
+
+- Python
+- scikit-learn
+- Matplotlib
+- NumPy
+
+## Project Structure
+
+```
+spam-detection-ml/
+├── spam_detection.py     # main training + evaluation + prediction script
+├── requirements.txt
+├── README.md
+└── outputs/               # generated after running (metrics, charts)
+```
+
+## Setup
+
+```bash
+git clone https://github.com/<your-username>/spam-detection-ml.git
+cd spam-detection-ml
+pip install -r requirements.txt
+```
+
+## Usage
+
+Train and evaluate all models:
+
+```bash
+python spam_detection.py
+```
+
+Classify a single message:
+
+```bash
+python spam_detection.py --predict "Congratulations! You have won a free prize, click here to claim"
+```
+
+Running the script generates, inside `outputs/`:
+- `confusion_matrix.png` — confusion matrix for the best model
+- `model_comparison.png` — accuracy comparison across models
+- `results.json` — full metrics for every model
+
+## Results
+
+| Model                | Accuracy | Precision | Recall | F1-Score |
+|-----------------------|:--------:|:---------:|:------:|:--------:|
+| Naive Bayes           | 93.5%    | 92.5%     | 94.9%  | 93.7%    |
+| Logistic Regression   | 93.5%    | 92.5%     | 94.9%  | 93.7%    |
+| Linear SVM            | 93.5%    | 92.5%     | 94.9%  | 93.7%    |
+
+**Best model:** Naive Bayes — 93.5% accuracy on unseen test messages with balanced precision and recall.
+
+## Future Scope
+
+- Train on a larger, real-world labeled dataset for stronger generalization
+- Experiment with deep learning models such as LSTM or BERT
+- Deploy as a REST API or browser extension for real-time spam filtering
+
+## License
+
+This project is for academic/internship purposes.
