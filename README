@@ -1,9 +1,9 @@
-# Spam Message Detection using Machine Learning
+ Spam Message Detection using Machine Learning
 
 An internship project that classifies SMS/email messages as **Spam** or **Ham** (legitimate) using TF-IDF features and classical machine learning models.
 
-**Author:** Ram Kumar A
-**Institution:** M.Sc. Computer Science, Dr. N.G.P. Arts and Science College, Coimbatore
+Author: Ram Kumar A
+**Institution:M.Sc. Computer Science, Dr. N.G.P. Arts and Science College, Coimbatore
 
 ## Problem Statement
 
